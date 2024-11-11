@@ -28,6 +28,10 @@ export default {
         "muted-foreground": "#A3A299",
         border: "#E6E4DD",
         input: "#F0EFEA",
+        foreground: "hsl(var(--foreground))",
+      },
+      textColor: {
+        foreground: "hsl(var(--foreground))",
       },
       fontFamily: {
         sans: ["SF Pro Display", "system-ui", "sans-serif"],

@@ -18,7 +18,7 @@ const Index = () => {
             <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-primary mb-6">
               Change the bank account
               <br />
-              <span className="bg-gradient-to-r from-accent to-[#F2FF44] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#9EE755] to-[#CFDD3C] bg-clip-text text-transparent">
                 you use
               </span>
             </h1>
@@ -47,7 +47,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Features Section */}
         <section className="py-24 bg-surface px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <h2 className="text-3xl font-bold text-center mb-16">Features designed for you</h2>

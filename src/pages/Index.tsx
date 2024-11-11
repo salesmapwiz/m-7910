@@ -35,22 +35,14 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Floating Phones */}
-          <div className="relative mt-16 flex justify-center">
-            <div className="grid grid-cols-3 gap-8">
-              {[1, 2, 3].map((index) => (
-                <div
-                  key={index}
-                  className={`animate-float`}
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                  <img
-                    src={`https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400`}
-                    alt={`App Screenshot ${index}`}
-                    className="rounded-3xl shadow-2xl"
-                  />
-                </div>
-              ))}
+          {/* Hero Image */}
+          <div className="relative mt-16">
+            <div className="flex justify-center">
+              <img
+                src="https://antimetal.com/images/hero/preview.png"
+                alt="Hero"
+                className="rounded-3xl shadow-2xl max-w-[90%] w-auto h-auto"
+              />
             </div>
           </div>
         </section>

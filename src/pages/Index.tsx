@@ -1,14 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
+import posthog from "posthog-js";
 
 const Index = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+
+  useEffect(() => {
+    // Initialize PostHog
+    posthog.init('YOUR_POSTHOG_PUBLIC_KEY', {
+      api_host: 'https://app.posthog.com',
+    });
+    // Track page view
+    posthog.capture('page_view', {
+      page: 'landing_page'
+    });
+  }, []);
 
   const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,6 +34,11 @@ const Index = () => {
 
       if (error) throw error;
 
+      // Track successful signup
+      posthog.capture('waitlist_signup', {
+        email: email
+      });
+
       toast({
         title: "Success!",
         description: "You've been added to the waitlist. We'll be in touch soon!",
@@ -32,6 +49,11 @@ const Index = () => {
         title: "Error",
         description: "Something went wrong. Please try again.",
         variant: "destructive",
+      });
+      // Track failed signup
+      posthog.capture('waitlist_signup_error', {
+        email: email,
+        error: error.message
       });
     } finally {
       setIsSubmitting(false);
@@ -110,8 +132,11 @@ const Index = () => {
             size="lg"
             className="bg-primary text-white hover:bg-primary/90"
             onClick={() => {
-              // Stripe integration will be added here
-              console.log("Lifetime deal button clicked");
+              posthog.capture('lifetime_deal_click');
+              toast({
+                title: "Coming Soon",
+                description: "Lifetime deals will be available soon!",
+              });
             }}
           >
             Get Lifetime Deal - $99
@@ -178,8 +203,11 @@ const Index = () => {
               size="lg"
               className="w-full bg-accent text-primary hover:bg-accent/90"
               onClick={() => {
-                // Stripe integration will be added here
-                console.log("Lifetime deal button clicked");
+                posthog.capture('lifetime_deal_bottom_click');
+                toast({
+                  title: "Coming Soon",
+                  description: "Lifetime deals will be available soon!",
+                });
               }}
             >
               Get Lifetime Access Now

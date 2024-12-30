@@ -23,6 +23,7 @@ export default {
         secondary: "#F97316",
         accent: "#F97316",
         background: "#F8FAFC",
+        foreground: "#1F2937",
         surface: "#fff",
         muted: "#94A3B8",
         "muted-foreground": "#64748B",

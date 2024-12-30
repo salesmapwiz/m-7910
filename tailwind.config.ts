@@ -19,22 +19,15 @@ export default {
     },
     extend: {
       colors: {
-        primary: "#141413",
-        secondary: "#828179",
-        accent: "#C7FB76",
-        background: "#FAFAF8",
+        primary: "#499AD4",
+        secondary: "#F97316",
+        accent: "#F97316",
+        background: "#F8FAFC",
         surface: "#fff",
-        muted: "#C4C3BB",
-        "muted-foreground": "#A3A299",
-        border: "#E6E4DD",
-        input: "#F0EFEA",
-        foreground: "hsl(var(--foreground))",
-      },
-      textColor: {
-        foreground: "hsl(var(--foreground))",
-      },
-      fontFamily: {
-        sans: ["SF Pro Display", "system-ui", "sans-serif"],
+        muted: "#94A3B8",
+        "muted-foreground": "#64748B",
+        border: "#E2E8F0",
+        input: "#F1F5F9",
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

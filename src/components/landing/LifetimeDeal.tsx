@@ -7,7 +7,7 @@ export const LifetimeDeal = () => {
   const { toast } = useToast();
 
   return (
-    <section className="py-24 bg-primary text-white px-6 lg:px-8">
+    <section id="pricing" className="py-24 bg-primary text-white px-6 lg:px-8">
       <div className="mx-auto max-w-7xl text-center">
         <h2 className="text-3xl sm:text-5xl font-bold mb-8">
           Limited Time Offer
@@ -34,14 +34,14 @@ export const LifetimeDeal = () => {
               "Future updates included",
             ].map((feature, index) => (
               <li key={index} className="flex items-center gap-2">
-                <Check className="h-5 w-5 text-accent" />
+                <Check className="h-5 w-5 text-secondary" />
                 <span>{feature}</span>
               </li>
             ))}
           </ul>
           <Button
             size="lg"
-            className="w-full bg-accent text-primary hover:bg-accent/90"
+            className="w-full bg-secondary hover:bg-secondary/90 text-white"
             onClick={() => {
               posthog.capture('lifetime_deal_bottom_click');
               toast({

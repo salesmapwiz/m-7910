@@ -50,14 +50,14 @@ export const Hero = () => {
   return (
     <section className="relative overflow-hidden px-6 lg:px-8 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl text-center">
-        <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-primary mb-6">
+        <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-black mb-6">
           Google Maps +{" "}
           <span className="text-[#FF7A59]">HubSpot</span> ={" "}
-          <span className="bg-gradient-to-r from-[#9EE755] to-[#CFDD3C] bg-clip-text text-transparent">
+          <span className="text-primary">
             Salesmap.ai
           </span>
         </h1>
-        <p className="mx-auto max-w-2xl text-lg text-secondary mb-8">
+        <p className="mx-auto max-w-2xl text-lg text-black mb-8">
           Turn Google Maps into your most powerful prospecting tool. Join the waitlist
           for early access and grab our exclusive lifetime deal.
         </p>
@@ -72,7 +72,7 @@ export const Hero = () => {
               required
               className="flex-1"
             />
-            <Button type="submit" disabled={isSubmitting}>
+            <Button type="submit" disabled={isSubmitting} className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white">
               Join Waitlist
             </Button>
           </div>
@@ -81,7 +81,7 @@ export const Hero = () => {
         <Button
           variant="outline"
           size="lg"
-          className="bg-primary text-white hover:bg-primary/90"
+          className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white"
           onClick={() => {
             posthog.capture('lifetime_deal_click');
             toast({

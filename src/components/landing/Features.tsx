@@ -6,7 +6,7 @@ const features = [
   {
     title: "Add to CRM from Google Maps",
     description: "Add businesses directly to HubSpot from Google Business profiles with just one click. Streamline your prospecting workflow and save hours of manual data entry.",
-    image: "/placeholder-feature.png", // Replace with actual image later
+    image: "/placeholder-feature.png",
   },
   {
     title: "Show Emails & Socials",
@@ -34,17 +34,17 @@ export const Features = () => {
   return (
     <section id="features" className="py-24 bg-white px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-3xl font-bold text-center mb-16 text-primary">
+        <h2 className="text-3xl font-bold text-center mb-16 text-black">
           Everything you need to supercharge your sales
         </h2>
         
         <div className="relative">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
             <div className="w-full md:w-1/2 space-y-4">
-              <h3 className="text-2xl font-semibold text-primary">
+              <h3 className="text-2xl font-semibold text-black">
                 {features[currentFeature].title}
               </h3>
-              <p className="text-gray-600 text-lg">
+              <p className="text-black text-lg">
                 {features[currentFeature].description}
               </p>
               <div className="flex items-center gap-4 pt-4">
@@ -52,18 +52,18 @@ export const Features = () => {
                   variant="outline"
                   size="icon"
                   onClick={prevFeature}
-                  className="rounded-full"
+                  className="rounded-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white"
                 >
                   <ChevronLeft className="h-4 w-4" />
                 </Button>
-                <span className="text-sm text-gray-500">
+                <span className="text-sm text-black">
                   {currentFeature + 1} of {features.length}
                 </span>
                 <Button
                   variant="outline"
                   size="icon"
                   onClick={nextFeature}
-                  className="rounded-full"
+                  className="rounded-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white"
                 >
                   <ChevronRight className="h-4 w-4" />
                 </Button>

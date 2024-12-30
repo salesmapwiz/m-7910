@@ -20,31 +20,31 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('features')} 
-              className="text-gray-700 hover:text-primary transition-colors text-sm font-medium"
+              className="text-black hover:text-gray-700 transition-colors text-sm font-medium"
             >
               Features
             </button>
             <button 
               onClick={() => scrollToSection('pricing')} 
-              className="text-gray-700 hover:text-primary transition-colors text-sm font-medium"
+              className="text-black hover:text-gray-700 transition-colors text-sm font-medium"
             >
               Pricing
             </button>
             <button 
-              className="text-gray-700 hover:text-primary transition-colors text-sm font-medium"
+              className="text-black hover:text-gray-700 transition-colors text-sm font-medium"
             >
               About
             </button>
             <button 
-              className="text-gray-700 hover:text-primary transition-colors text-sm font-medium"
+              className="text-black hover:text-gray-700 transition-colors text-sm font-medium"
             >
               FAQ
             </button>
             
-            <Button variant="ghost" className="text-gray-700">
+            <Button variant="ghost" className="text-black hover:text-gray-700">
               Sign in
             </Button>
-            <Button className="bg-primary hover:bg-primary/90 text-white">
+            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white">
               Book a demo
             </Button>
           </div>

@@ -17,6 +17,10 @@ export const ProblemSolution = () => {
       text: "No way to visually manage leads directly on Google Maps",
       emoji: "📍",
     },
+    {
+      text: "No filtering options to find the right businesses",
+      emoji: "🔍",
+    },
   ];
 
   const solutions = [
@@ -69,8 +73,8 @@ export const ProblemSolution = () => {
           <div className="w-full md:w-1/2">
             <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
-                alt="Business person struggling with multiple tabs"
+                src="/lovable-uploads/84a706bf-4d95-4fba-a6c7-f8768b94e844.png"
+                alt="Google Maps interface showing multiple tabs and tools"
                 className="w-full h-full object-cover"
               />
             </div>

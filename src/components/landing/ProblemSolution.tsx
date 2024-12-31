@@ -66,31 +66,29 @@ export const ProblemSolution = () => {
     <section className="py-24 bg-white">
       {/* Problem Section */}
       <div className="container mx-auto px-6 mb-24">
-        <h2 className="text-3xl font-bold text-center text-black mb-16">
+        <h2 className="text-3xl font-bold text-center text-black mb-12">
           The Problem – Wasting Time and Missing Opportunities
         </h2>
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="w-full md:w-1/2">
-            <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
-              <img
-                src="/lovable-uploads/84a706bf-4d95-4fba-a6c7-f8768b94e844.png"
-                alt="Google Maps interface showing multiple tabs and tools"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-          <div className="w-full md:w-1/2">
-            <ul className="space-y-6">
-              {problems.map((problem, index) => (
-                <li
-                  key={index}
-                  className="flex items-start gap-4 text-lg text-black"
-                >
-                  <span className="text-2xl">{problem.emoji}</span>
-                  <span>{problem.text}</span>
-                </li>
-              ))}
-            </ul>
+        
+        <div className="flex flex-col gap-12">
+          <ul className="space-y-6 max-w-2xl mx-auto">
+            {problems.map((problem, index) => (
+              <li
+                key={index}
+                className="flex items-start gap-4 text-lg text-black"
+              >
+                <span className="text-2xl">{problem.emoji}</span>
+                <span>{problem.text}</span>
+              </li>
+            ))}
+          </ul>
+          
+          <div className="w-full rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="/lovable-uploads/84a706bf-4d95-4fba-a6c7-f8768b94e844.png"
+              alt="Google Maps interface showing multiple tabs and tools"
+              className="w-full h-auto object-cover"
+            />
           </div>
         </div>
       </div>
